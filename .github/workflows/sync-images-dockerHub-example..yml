@@ -26,12 +26,22 @@ jobs:
     - name: Login to Docker Hub
       uses: docker/login-action@v2.2.0
       with:
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_PASSWORD }}
         logout: false
         
     - name: Use Skopeo Tools Sync Image to Docker Hub
       run: |
         #!/usr/bin/env bash
-        skopeo copy docker://gcr.io/kaniko-project/executor:v1.13.0 docker://weiyigeek/kaniko-executor:v1.13.0
+        skopeo copy --all docker://gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/controller:v0.41.3 docker://shangshan/tektoncd-pipeline-controller:v0.41.3
+        skopeo copy --all docker://gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/resolvers:v0.41.3 docker://shangshan/tektoncd-pipeline-resolvers:v0.41.3
+        skopeo copy --all docker://gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/webhook:v0.41.3 docker://shangshan/tektoncd-pipeline-webhook:v0.41.3
+        skopeo copy --all docker://gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/kubeconfigwriter:v0.41.3 docker://shangshan/tektoncd-pipeline-kubeconfigwriter:v0.41.3
+        skopeo copy --all docker://gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/git-init:v0.41.3 docker://shangshan/tektoncd-pipeline-git-init:v0.41.3
+        skopeo copy --all docker://gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/entrypoint:v0.41.3 docker://shangshan/tektoncd-pipeline-entrypoint:v0.41.3
+        skopeo copy --all docker://gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/nop:v0.41.3 docker://shangshan/tektoncd-pipeline-nop:v0.41.3
+        skopeo copy --all docker://gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/imagedigestexporter:v0.41.3 docker://shangshan/tektoncd-pipeline-imagedigestexporter:v0.41.3
+        skopeo copy --all docker://gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/pullrequest-init:v0.41.3 docker://shangshan/tektoncd-pipeline-pullrequest-init:v0.41.3
+        skopeo copy --all docker://gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/workingdirinit:v0.41.3 docker://shangshan/tektoncd-pipeline-workingdirinit:v0.41.3
+
  
