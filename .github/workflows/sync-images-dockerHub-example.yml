@@ -33,15 +33,15 @@ jobs:
     - name: Use Skopeo Tools Sync Image to Docker Hub
       run: |
         #!/usr/bin/env bash
-        skopeo copy --all docker://gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/controller:v0.43.2 docker://docker.io/shangshan/tektoncd-pipeline-controller:v0.43.2
-        skopeo copy --all docker://gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/resolvers:v0.43.2 docker://docker.io/shangshan/tektoncd-pipeline-resolvers:v0.43.2
-        skopeo copy --all docker://gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/webhook:v0.43.2 docker://docker.io/shangshan/tektoncd-pipeline-webhook:v0.43.2
-        skopeo copy --all docker://gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/kubeconfigwriter:v0.43.2 docker://docker.io/shangshan/tektoncd-pipeline-kubeconfigwriter:v0.43.2
-        skopeo copy --all docker://gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/git-init:v0.43.2 docker://docker.io/shangshan/tektoncd-pipeline-git-init:v0.43.2
-        skopeo copy --all docker://gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/entrypoint:v0.43.2 docker://docker.io/shangshan/tektoncd-pipeline-entrypoint:v0.43.2
-        skopeo copy --all docker://gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/nop:v0.43.2 docker://docker.io/shangshan/tektoncd-pipeline-nop:v0.43.2
-        skopeo copy --all docker://gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/imagedigestexporter:v0.43.2 docker://docker.io/shangshan/tektoncd-pipeline-imagedigestexporter:v0.43.2
-        skopeo copy --all docker://gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/pullrequest-init:v0.43.2 docker://docker.io/shangshan/tektoncd-pipeline-pullrequest-init:v0.43.2
-        skopeo copy --all docker://gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/workingdirinit:v0.43.2 docker://docker.io/shangshan/tektoncd-pipeline-workingdirinit:v0.43.2
+        skopeo copy --all docker://ghcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/controller:v0.43.2 docker://docker.io/shangshan/tektoncd-pipeline-controller:v0.43.2
+        skopeo copy --all docker://ghcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/resolvers:v0.43.2 docker://docker.io/shangshan/tektoncd-pipeline-resolvers:v0.43.2
+        skopeo copy --all docker://ghcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/webhook:v0.43.2 docker://docker.io/shangshan/tektoncd-pipeline-webhook:v0.43.2
+        skopeo copy --all docker://ghcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/kubeconfigwriter:v0.43.2 docker://docker.io/shangshan/tektoncd-pipeline-kubeconfigwriter:v0.43.2
+        skopeo copy --all docker://ghcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/git-init:v0.43.2 docker://docker.io/shangshan/tektoncd-pipeline-git-init:v0.43.2
+        skopeo copy --all docker://ghcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/entrypoint:v0.43.2 docker://docker.io/shangshan/tektoncd-pipeline-entrypoint:v0.43.2
+        skopeo copy --all docker://ghcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/nop:v0.43.2 docker://docker.io/shangshan/tektoncd-pipeline-nop:v0.43.2
+        skopeo copy --all docker://ghcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/imagedigestexporter:v0.43.2 docker://docker.io/shangshan/tektoncd-pipeline-imagedigestexporter:v0.43.2
+        skopeo copy --all docker://ghcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/pullrequest-init:v0.43.2 docker://docker.io/shangshan/tektoncd-pipeline-pullrequest-init:v0.43.2
+        skopeo copy --all docker://ghcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/workingdirinit:v0.43.2 docker://docker.io/shangshan/tektoncd-pipeline-workingdirinit:v0.43.2
 
  
