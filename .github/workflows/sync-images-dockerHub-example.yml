@@ -34,7 +34,7 @@ jobs:
       run: |
         #!/usr/bin/env bash
         skopeo copy --all docker://k8s.gcr.io/kube-apiserver:v1.20.5 docker://shangshan/kube-apiserver:v1.20.5
-        skopeo copy --all docker://gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/controller:v0.43.2 docker://shangshan/tektoncd-pipeline-controller:v0.43.2
+        #skopeo copy --all docker://gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/controller:v0.43.2 docker://shangshan/tektoncd-pipeline-controller:v0.43.2
         #skopeo copy --all docker://gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/resolvers:v0.43.2 docker://docker.io/shangshan/tektoncd-pipeline-resolvers:v0.43.2
         #skopeo copy --all docker://gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/webhook:v0.43.2 docker://docker.io/shangshan/tektoncd-pipeline-webhook:v0.43.2
         #skopeo copy --all docker://gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/kubeconfigwriter:v0.43.2 docker://docker.io/shangshan/tektoncd-pipeline-kubeconfigwriter:v0.43.2
